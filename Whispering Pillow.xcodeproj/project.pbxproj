@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7E417362C43D6BC008B511A /* Whispering_PillowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E417352C43D6BC008B511A /* Whispering_PillowApp.swift */; };
+		C7E417382C43D6BC008B511A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E417372C43D6BC008B511A /* ContentView.swift */; };
+		C7E4173A2C43D6BD008B511A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E417392C43D6BD008B511A /* Assets.xcassets */; };
+		C7E4173D2C43D6BD008B511A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E4173C2C43D6BD008B511A /* Preview Assets.xcassets */; };
+		C7E417442C43DCC6008B511A /* SoundsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E417432C43DCC6008B511A /* SoundsVM.swift */; };
+		C7E417482C43F112008B511A /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E417472C43F112008B511A /* SoundPlayer.swift */; };
+		C7E4174A2C442255008B511A /* SingleSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E417492C442255008B511A /* SingleSoundView.swift */; };
+		C7E4174F2C4430AD008B511A /* AppStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4174E2C4430AD008B511A /* AppStateView.swift */; };
+		C7E417542C444196008B511A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E417532C444196008B511A /* Launch Screen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C7E417322C43D6BC008B511A /* Whispering Pillow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whispering Pillow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E417352C43D6BC008B511A /* Whispering_PillowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whispering_PillowApp.swift; sourceTree = "<group>"; };
+		C7E417372C43D6BC008B511A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7E417392C43D6BD008B511A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7E4173C2C43D6BD008B511A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7E417432C43DCC6008B511A /* SoundsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsVM.swift; sourceTree = "<group>"; };
+		C7E417472C43F112008B511A /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		C7E417492C442255008B511A /* SingleSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSoundView.swift; sourceTree = "<group>"; };
+		C7E4174E2C4430AD008B511A /* AppStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateView.swift; sourceTree = "<group>"; };
+		C7E417502C44383C008B511A /* Whispering-Pillow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Whispering-Pillow-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C7E417532C444196008B511A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7E4172F2C43D6BC008B511A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C78943A12C451DC200899D19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7E417392C43D6BD008B511A /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C7E417292C43D6BC008B511A = {
+			isa = PBXGroup;
+			children = (
+				C7E417502C44383C008B511A /* Whispering-Pillow-Info.plist */,
+				C7E417342C43D6BC008B511A /* Whispering Pillow */,
+				C7E417332C43D6BC008B511A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7E417332C43D6BC008B511A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7E417322C43D6BC008B511A /* Whispering Pillow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7E417342C43D6BC008B511A /* Whispering Pillow */ = {
+			isa = PBXGroup;
+			children = (
+				C7E417352C43D6BC008B511A /* Whispering_PillowApp.swift */,
+				C7E4174E2C4430AD008B511A /* AppStateView.swift */,
+				C7E417372C43D6BC008B511A /* ContentView.swift */,
+				C7E4174B2C442FA6008B511A /* Components */,
+				C7E4174C2C443037008B511A /* ViewModel */,
+				C7E4174D2C443040008B511A /* Model */,
+				C78943A12C451DC200899D19 /* Resources */,
+				C7E4173B2C43D6BD008B511A /* Preview Content */,
+				C7E417532C444196008B511A /* Launch Screen.storyboard */,
+			);
+			path = "Whispering Pillow";
+			sourceTree = "<group>";
+		};
+		C7E4173B2C43D6BD008B511A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7E4173C2C43D6BD008B511A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7E4174B2C442FA6008B511A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C7E417492C442255008B511A /* SingleSoundView.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		C7E4174C2C443037008B511A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C7E417432C43DCC6008B511A /* SoundsVM.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		C7E4174D2C443040008B511A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7E417472C43F112008B511A /* SoundPlayer.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7E417312C43D6BC008B511A /* Whispering Pillow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7E417402C43D6BD008B511A /* Build configuration list for PBXNativeTarget "Whispering Pillow" */;
+			buildPhases = (
+				C7E4172E2C43D6BC008B511A /* Sources */,
+				C7E4172F2C43D6BC008B511A /* Frameworks */,
+				C7E417302C43D6BC008B511A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Whispering Pillow";
+			productName = "Whispering Pillow";
+			productReference = C7E417322C43D6BC008B511A /* Whispering Pillow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7E4172A2C43D6BC008B511A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					C7E417312C43D6BC008B511A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = C7E4172D2C43D6BC008B511A /* Build configuration list for PBXProject "Whispering Pillow" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7E417292C43D6BC008B511A;
+			productRefGroup = C7E417332C43D6BC008B511A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7E417312C43D6BC008B511A /* Whispering Pillow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7E417302C43D6BC008B511A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E417542C444196008B511A /* Launch Screen.storyboard in Resources */,
+				C7E4173D2C43D6BD008B511A /* Preview Assets.xcassets in Resources */,
+				C7E4173A2C43D6BD008B511A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7E4172E2C43D6BC008B511A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E4174A2C442255008B511A /* SingleSoundView.swift in Sources */,
+				C7E417382C43D6BC008B511A /* ContentView.swift in Sources */,
+				C7E4174F2C4430AD008B511A /* AppStateView.swift in Sources */,
+				C7E417362C43D6BC008B511A /* Whispering_PillowApp.swift in Sources */,
+				C7E417482C43F112008B511A /* SoundPlayer.swift in Sources */,
+				C7E417442C43DCC6008B511A /* SoundsVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C7E4173E2C43D6BD008B511A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7E4173F2C43D6BD008B511A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7E417412C43D6BD008B511A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Whispering Pillow/Preview Content\"";
+				DEVELOPMENT_TEAM = 72CAUS7668;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Whispering-Pillow-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Whispering Pillow";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlvsiOSdev.Whispering-Pillow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7E417422C43D6BD008B511A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Whispering Pillow/Preview Content\"";
+				DEVELOPMENT_TEAM = 72CAUS7668;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Whispering-Pillow-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Whispering Pillow";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlvsiOSdev.Whispering-Pillow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7E4172D2C43D6BC008B511A /* Build configuration list for PBXProject "Whispering Pillow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E4173E2C43D6BD008B511A /* Debug */,
+				C7E4173F2C43D6BD008B511A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7E417402C43D6BD008B511A /* Build configuration list for PBXNativeTarget "Whispering Pillow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E417412C43D6BD008B511A /* Debug */,
+				C7E417422C43D6BD008B511A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7E4172A2C43D6BC008B511A /* Project object */;
+}
