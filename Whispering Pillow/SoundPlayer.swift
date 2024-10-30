@@ -10,5 +10,6 @@ import AVFAudio
 
 struct SoundPlayer: Hashable {
     let name: String
+    let image: String
     var player: AVAudioPlayer
 }

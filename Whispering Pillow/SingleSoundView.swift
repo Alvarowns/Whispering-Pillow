@@ -58,7 +58,6 @@ struct SingleSoundView: View {
         .animation(.easeInOut, value: mute)
         .onAppear {
             audioPlayer.volume = volume
-//            audioPlayer.play()
             audioPlayer.numberOfLoops = -1
         }
     }

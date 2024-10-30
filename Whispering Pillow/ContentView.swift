@@ -17,29 +17,22 @@ struct ContentView: View {
     @State private var clockTime: Date = .now
     @State private var timerRunning: Bool = false
     
-    let timerPublisher = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
+    let timerPublisher = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+    let columns = [GridItem(.adaptive(minimum: 100))]
     
     var body: some View {
         NavigationStack {
             ZStack {
                 VStack {
-    //                Text("Whispering Pillow")
-    //                    .font(.largeTitle)
-    //                    .fontWeight(.heavy)
-    //                    .foregroundStyle(.white)
-    //                    .shadow(color: .eggplant, radius: 2)
-    //                    .shadow(color: .eggplant, radius: 2)
-    //                    .opacity(0.9)
-                    
                     Spacer()
                     
-                    VStack {
+                    LazyVGrid(columns: columns, spacing: 40) {
                         ForEach(viewModel.audioPlayers, id: \.self) { audioPlayer in
-                            SingleSoundView(audioPlayer: audioPlayer.player, title: audioPlayer.name.capitalized)
+                            SingleSoundV2(audioPlayer: audioPlayer.player, title: audioPlayer.name, image: audioPlayer.image)
                         }
                     }
-                    .disabled(timer ? true : false)
-                    .blur(radius: timer ? 3.0 : 0.0)
+                    
+                    Spacer()
                     
                     Button {
                         if !isPlaying {
@@ -53,33 +46,69 @@ struct ContentView: View {
                         Image(systemName: isPlaying ? "pause" : "play")
                             .symbolVariant(.fill)
                             .foregroundStyle(.white)
-                            .font(.custom("", size: 60))
-                            .frame(maxHeight: 40)
-                            .shadow(radius: 5)
+                            .font(.custom("", size: 80))
+                            .frame(height: 100)
                     }
+                    .padding()
                     
                     Spacer()
-                    
-                    Text("Playing until: \(clockTime.formatted(.dateTime.hour().minute()))")
-                        .bold()
-                        .font(.title2)
-                        .foregroundStyle(.white)
-                        .opacity(timerRunning ? 1.0 : 0.0)
-                    
-                    Button {
-                        if clockTime > .now {
-                            clockTime = .now
-                            timerRunning = false
-                        } else {
-                            timer.toggle()
-                        }
-                    } label: {
-                        Text(clockTime > .now ? "Stop timer" : "Set a timer")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(clockTime > .now ? .red : .blue)
                 }
-                .frame(maxHeight: .infinity)
+//                VStack {
+    //                Text("Whispering Pillow")
+    //                    .font(.largeTitle)
+    //                    .fontWeight(.heavy)
+    //                    .foregroundStyle(.white)
+    //                    .shadow(color: .eggplant, radius: 2)
+    //                    .shadow(color: .eggplant, radius: 2)
+    //                    .opacity(0.9)
+                    
+//                    VStack {
+//                        ForEach(viewModel.audioPlayers, id: \.self) { audioPlayer in
+//                            SingleSoundView(audioPlayer: audioPlayer.player, title: audioPlayer.name.capitalized)
+//                        }
+//                    }
+//                    .disabled(timer ? true : false)
+//                    .blur(radius: timer ? 3.0 : 0.0)
+//                    
+//                    Button {
+//                        if !isPlaying {
+//                            isPlaying = true
+//                            viewModel.playSounds()
+//                        } else {
+//                            isPlaying = false
+//                            viewModel.stopSounds()
+//                        }
+//                    } label: {
+//                        Image(systemName: isPlaying ? "pause" : "play")
+//                            .symbolVariant(.fill)
+//                            .foregroundStyle(.white)
+//                            .font(.custom("", size: 60))
+//                            .frame(maxHeight: 40)
+//                            .shadow(radius: 5)
+//                    }
+//                    
+//                    Spacer()
+//                    
+//                    Text("Playing until: \(clockTime.formatted(.dateTime.hour().minute()))")
+//                        .bold()
+//                        .font(.title2)
+//                        .foregroundStyle(.white)
+//                        .opacity(timerRunning ? 1.0 : 0.0)
+//                    
+//                    Button {
+//                        if clockTime > .now {
+//                            clockTime = .now
+//                            timerRunning = false
+//                        } else {
+//                            timer.toggle()
+//                        }
+//                    } label: {
+//                        Text(clockTime > .now ? "Stop timer" : "Set a timer")
+//                    }
+//                    .buttonStyle(.borderedProminent)
+//                    .tint(clockTime > .now ? .red : .blue)
+//                }
+//                .frame(maxHeight: .infinity)
                 
                 VStack {
                     DatePicker("", selection: $clockTime, displayedComponents: .hourAndMinute)
@@ -134,6 +163,7 @@ struct ContentView: View {
                                 .foregroundStyle(.white)
                         }
                     }
+                    .font(.title2)
                 }
             }
             .onReceive(timerPublisher) { _ in

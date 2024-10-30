@@ -58,12 +58,12 @@ class SoundsVM: ObservableObject {
             }
         }
     
-    func loadSound(from filename: String) {
+    func loadSound(from filename: String, with image: String) {
         guard let soundFile = NSDataAsset(name: filename) else { return }
         
         do {
             let newAudio = try AVAudioPlayer(data: soundFile.data)
-            let soundPlayer = SoundPlayer(name: filename, player: newAudio)
+            let soundPlayer = SoundPlayer(name: filename, image: image, player: newAudio)
             audioPlayers.append(soundPlayer)
         } catch {
             print("Error: \(error.localizedDescription)")
@@ -72,8 +72,23 @@ class SoundsVM: ObservableObject {
     
     func loadMultipleSounds() {
         let filenames = ["water", "rain", "waves", "storm", "wind", "fire", "nature", "crowd"]
+        var image = ""
+        
         for filename in filenames {
-            loadSound(from: filename)
+            switch filename {
+            case "water": image = "drop.fill"
+            case "rain": image = "cloud.rain.fill"
+            case "waves": image = "water.waves"
+            case "storm": image = "cloud.bolt.rain.fill"
+            case "wind": image = "wind"
+            case "fire": image = "flame.fill"
+            case "nature": image = "leaf.fill"
+            case "crowd": image = "person.3.fill"
+            default: image = "music.quarternote.3"
+            }
+            
+            loadSound(from: filename, with: image)
+            image = ""
         }
     }
     

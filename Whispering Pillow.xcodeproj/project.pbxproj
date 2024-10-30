@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C72D08552CD23C3F00C9E03E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D08542CD23C3F00C9E03E /* SettingsView.swift */; };
+		C775F3BA2CD2A53600E00B48 /* SingleSoundV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775F3B92CD2A53600E00B48 /* SingleSoundV2.swift */; };
 		C7E417362C43D6BC008B511A /* Whispering_PillowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E417352C43D6BC008B511A /* Whispering_PillowApp.swift */; };
 		C7E417382C43D6BC008B511A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E417372C43D6BC008B511A /* ContentView.swift */; };
 		C7E4173A2C43D6BD008B511A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E417392C43D6BD008B511A /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		C72D08542CD23C3F00C9E03E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C775F3B92CD2A53600E00B48 /* SingleSoundV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSoundV2.swift; sourceTree = "<group>"; };
 		C7E417322C43D6BC008B511A /* Whispering Pillow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whispering Pillow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E417352C43D6BC008B511A /* Whispering_PillowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whispering_PillowApp.swift; sourceTree = "<group>"; };
 		C7E417372C43D6BC008B511A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E417492C442255008B511A /* SingleSoundView.swift */,
+				C775F3B92CD2A53600E00B48 /* SingleSoundV2.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72D08552CD23C3F00C9E03E /* SettingsView.swift in Sources */,
+				C775F3BA2CD2A53600E00B48 /* SingleSoundV2.swift in Sources */,
 				C7E4174A2C442255008B511A /* SingleSoundView.swift in Sources */,
 				C7E417382C43D6BC008B511A /* ContentView.swift in Sources */,
 				C7E4174F2C4430AD008B511A /* AppStateView.swift in Sources */,
