@@ -11,6 +11,7 @@ import AVFAudio
 @Observable
 class SoundsVM: ObservableObject {
     var audioPlayers: [SoundPlayer] = []
+    var audioPlayersSelected: [SoundPlayer] = []
     
     init() {
         setupAudioSession()

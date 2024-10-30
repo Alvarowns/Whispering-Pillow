@@ -20,94 +20,131 @@ struct ContentView: View {
     let timerPublisher = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        ZStack {
-            VStack {
-                Text("Whispering Pillow")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundStyle(.white)
-                    .shadow(color: .eggplant, radius: 2)
-                    .shadow(color: .eggplant, radius: 2)
-                    .opacity(0.9)
-                
-                Spacer()
+        NavigationStack {
+            ZStack {
+                VStack {
+    //                Text("Whispering Pillow")
+    //                    .font(.largeTitle)
+    //                    .fontWeight(.heavy)
+    //                    .foregroundStyle(.white)
+    //                    .shadow(color: .eggplant, radius: 2)
+    //                    .shadow(color: .eggplant, radius: 2)
+    //                    .opacity(0.9)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        ForEach(viewModel.audioPlayers, id: \.self) { audioPlayer in
+                            SingleSoundView(audioPlayer: audioPlayer.player, title: audioPlayer.name.capitalized)
+                        }
+                    }
+                    .disabled(timer ? true : false)
+                    .blur(radius: timer ? 3.0 : 0.0)
+                    
+                    Button {
+                        if !isPlaying {
+                            isPlaying = true
+                            viewModel.playSounds()
+                        } else {
+                            isPlaying = false
+                            viewModel.stopSounds()
+                        }
+                    } label: {
+                        Image(systemName: isPlaying ? "pause" : "play")
+                            .symbolVariant(.fill)
+                            .foregroundStyle(.white)
+                            .font(.custom("", size: 60))
+                            .frame(maxHeight: 40)
+                            .shadow(radius: 5)
+                    }
+                    
+                    Spacer()
+                    
+                    Text("Playing until: \(clockTime.formatted(.dateTime.hour().minute()))")
+                        .bold()
+                        .font(.title2)
+                        .foregroundStyle(.white)
+                        .opacity(timerRunning ? 1.0 : 0.0)
+                    
+                    Button {
+                        if clockTime > .now {
+                            clockTime = .now
+                            timerRunning = false
+                        } else {
+                            timer.toggle()
+                        }
+                    } label: {
+                        Text(clockTime > .now ? "Stop timer" : "Set a timer")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(clockTime > .now ? .red : .blue)
+                }
+                .frame(maxHeight: .infinity)
                 
                 VStack {
-                    ForEach(viewModel.audioPlayers, id: \.self) { audioPlayer in
-                        SingleSoundView(audioPlayer: audioPlayer.player, title: audioPlayer.name.capitalized)
-                    }
-                }
-                .padding(.bottom, 40)
-                .disabled(timer ? true : false)
-                .blur(radius: timer ? 3.0 : 0.0)
-                
-                Text("Playing until: \(clockTime.formatted(.dateTime.hour().minute()))")
-                    .bold()
-                    .font(.title2)
-                    .foregroundStyle(.white)
-                    .opacity(timerRunning ? 1.0 : 0.0)
-                
-                Button {
-                    if clockTime > .now {
-                        clockTime = .now
-                        timerRunning = false
-                    } else {
-                        timer.toggle()
-                    }
-                } label: {
-                    Text(clockTime > .now ? "Stop timer" : "Set a timer")
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(clockTime > .now ? .red : .blue)
-                
-                Spacer()
-            }
-            .frame(maxHeight: .infinity)
-            
-            VStack {
-                DatePicker("", selection: $clockTime, displayedComponents: .hourAndMinute)
-                    .datePickerStyle(.wheel)
-                    .padding(.trailing)
-                
-                HStack {
-                    Button {
-                        timer = false
-                        timerRunning = true
-                    } label: {
-                        Text("Set")
-                            .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .padding()
+                    DatePicker("", selection: $clockTime, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(.wheel)
+                        .padding(.trailing)
                     
-                    Button(role: .destructive) {
-                        clockTime = .now
-                        timer = false
-                        timerRunning = false
-                    } label: {
-                        Text("Cancel")
-                            .frame(maxWidth: .infinity)
+                    HStack {
+                        Button {
+                            timer = false
+                            timerRunning = true
+                        } label: {
+                            Text("Set")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .padding()
+                        
+                        Button(role: .destructive) {
+                            clockTime = .now
+                            timer = false
+                            timerRunning = false
+                        } label: {
+                            Text("Cancel")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .padding()
                     }
-                    .buttonStyle(.borderedProminent)
-                    .padding()
+                }
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundStyle(.white)
+                        .padding()
+                }
+                .opacity(timer ? 1.0 : 0.0)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    HStack {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "cart.fill")
+                                .foregroundStyle(.white)
+                        }
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "gearshape.fill")
+                                .foregroundStyle(.white)
+                        }
+                    }
                 }
             }
-            .padding()
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .foregroundStyle(.white)
-                    .padding()
+            .onReceive(timerPublisher) { _ in
+                checkTimeAndStopSounds()
             }
-            .opacity(timer ? 1.0 : 0.0)
-        }
-        .onReceive(timerPublisher) { _ in
-            checkTimeAndStopSounds()
-        }
-        .background {
-            Image(.background)
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
+            .background {
+                Image(.background)
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+            }
         }
     }
     
@@ -118,8 +155,8 @@ struct ContentView: View {
             let setComponents = calendar.dateComponents([.hour, .minute], from: clockTime)
             
             if nowComponents.hour == setComponents.hour && nowComponents.minute == setComponents.minute {
-                //Parar sonidos o bajar volumen aquí.
-                
+                viewModel.stopSounds()
+                isPlaying = false
                 timerRunning = false
             }
         }
